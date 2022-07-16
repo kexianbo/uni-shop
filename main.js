@@ -2,6 +2,7 @@
 // #ifndef VUE3
 import Vue from 'vue'
 import App from './App'
+//引入网络请求插件，并挂载在项目中
 import { $http } from '@escook/request-miniprogram'
 uni.$http = $http
 // 配置请求根路径
@@ -17,6 +18,15 @@ $http.beforeRequest = function (options) {
 // 请求完成之后做一些事情
 $http.afterRequest = function () {
   uni.hideLoading()
+}
+
+//封装请求接口提示信息方法
+uni.$showMsg = function (title="数据加载失败!",duration=1500){
+    uni.showToast({
+      title,
+      duration,
+      icon:"none"
+    })
 }
 Vue.config.productionTip = false
 

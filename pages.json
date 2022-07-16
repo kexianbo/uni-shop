@@ -25,6 +25,21 @@
         }
       }
   ],
+  "subPackages": [
+    {
+      "root":"subpck",
+      "pages":[{
+                    "path" : "goodsDetail/goodsDetail",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
+            ]
+    }
+  ],
    "tabBar": {
       "selectedColor": "#C00000",
       "list": [
